@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    RemoveNote
+{% endblock %}
+
+{% block main %}
+    <form action="/removenote" method="post">
+        <div class="mb-3">
+            <select class="form-select mx-auto w-auto" name="title">
+                <option disabled selected>select note's title</option>
+                {% for title in notes_dictionary %}
+                    <option value="{{ title }}">{{ title }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <button class="btn btn-danger" type="submit">Delete</button>
+    </form>
+{% endblock %}
+p

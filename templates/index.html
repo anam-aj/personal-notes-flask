@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+    <!-- Loop through the notes dictionary to display them -->
+    <div class="row">
+        {% for title, detail in notes_dictionary.items() %}
+            <div class="col-md-4">
+                <div class="card bg-light text-dark m-3" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: steelblue">{{ title }}</h5>
+                        <p class="card-text" style="color: gray">{{ detail }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

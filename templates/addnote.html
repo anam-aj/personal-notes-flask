@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    AddNote
+{% endblock %}
+
+{% block main %}
+    <form action="/addnote" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="title" placeholder="Title" type="text">
+        </div>
+
+        <div class="mb-3">
+            <input autocomplete="off" class="form-control mx-auto w-auto" name="detail" placeholder="Detail" type="text">
+        </div>
+
+        <button class="btn btn-primary" type="submit">AddNote</button>
+    </form>
+{% endblock %}
